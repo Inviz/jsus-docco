@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Docco</title>
+    <link href='style.css' rel='stylesheet' />
+  </head>
+  <body>
+    <figure>
+      <h2>Requires</h2>
+      <ul>
+        <li>
+          <a href='#'>ART.Widget.Menu</a>
+        </li>
+        <li>
+          <a href='#'>ART.Widget.Button</a>
+        </li>
+        <li>
+          <a href='#'>Base</a>
+          /
+          <a href='#'>Widget.Trait.Focus</a>
+        </li>
+        <li>
+          <a href='#'>Base</a>
+          /
+          <a href='#'>Widget.Trait.List</a>
+        </li>
+      </ul>
+      <h2>Provides</h2>
+      <ul>
+        <li>
+          <a href='#'>ART.Widget.Button</a>
+        </li>
+      </ul>
+    </figure>
+    <header>
+      <p>
+        <a href='#'>LSD</a>
+        /
+        <a href='#'>Widget</a>
+        /
+      </p>
+      <h1>Toolbar.js</h1>
+      <p>Menu widget to be used as a drop down</p>
+      <dl>
+        <dt>License:</dt>
+        <dd>Public domain (http://unlicense.org)</dd>
+        <dt>Author:</dt>
+        <dd>Yaroslaff Fedin</dd>
+      </dl>
+    </header>
+    <p>
+      <strong>Docco</strong>
+      is a quick-and-dirty, hundred-line-long, literate-programming-style
+      documentation generator. It produces HTML that displays your comments
+      alongside your code. Comments are passed through<a href='http://daringfireball.net/projects/markdown/syntax'>Markdown</a>, and code is
+      This page is the result of running Docco against its own source file.
+    </p>
+    <p>If you install Docco, you can run it from the command-line:</p>
+    <code>docco src/*.coffee</code>
+    <p>
+      will generate linked HTML documentation for the named source files, saving
+      it into a <code>docs</code> folder.
+    </p>
+    <p>
+      The <a href="http://github.com/jashkenas/docco">source for Docco</a> is available on GitHub,
+      and released under the MIT license.
+    </p>
+    <figure>
+      <code><span class="nv">generate_documentation = </span><span class="p">(</span><span class="nx">source</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="o">-&gt;</span>
+      <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span> <span class="nx">source</span><span class="p">,</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">code</span><span class="p">)</span> <span class="o">-&gt;</span>
+      &nbsp;&nbsp;<span class="k">throw</span> <span class="nx">error</span> <span class="k">if</span> <span class="nx">error</span>
+      &nbsp;&nbsp;<span class="nv">sections = </span><span class="nx">parse</span> <span class="nx">source</span><span class="p">,</span> <span class="nx">code</span>
+      &nbsp;&nbsp;<span class="nx">highlight</span> <span class="nx">source</span><span class="p">,</span> <span class="nx">sections</span><span class="p">,</span> <span class="o">-&gt;</span>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">generate_html</span> <span class="nx">source</span><span class="p">,</span> <span class="nx">sections</span>
+      &nbsp;<span class="nx">callback</span><span class="p">()</span></code>
+    </figure>
+    <p>
+      To install Docco, first make sure you have <a href="http://nodejs.org/">Node.js</a>,
+      <a href="http://pygments.org/">Pygments</a> (install the latest dev version of Pygments
+      from <a href="http://dev.pocoo.org/hg/pygments-main">its Mercurial repo</a>), and
+      <a href="http://coffeescript.org/">CoffeeScript</a>. Then, with NPM:
+    </p>
+    <figure>
+      <code><span class="nv">generate_documentation = </span><span class="p">(</span><span class="nx">source</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="o">-&gt;</span>
+      <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span> <span class="nx">source</span><span class="p">,</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">code</span><span class="p">)</span> <span class="o">-&gt;</span>
+      &nbsp;&nbsp;<span class="k">throw</span> <span class="nx">error</span> <span class="k">if</span> <span class="nx">error</span>
+      &nbsp;&nbsp;<span class="nv">sections = </span><span class="nx">parse</span> <span class="nx">source</span><span class="p">,</span> <span class="nx">code</span>
+      &nbsp;&nbsp;<span class="nx">highlight</span> <span class="nx">source</span><span class="p">,</span> <span class="nx">sections</span><span class="p">,</span> <span class="o">-&gt;</span>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">generate_html</span> <span class="nx">source</span><span class="p">,</span> <span class="nx">sections</span>
+      &nbsp;<span class="nx">callback</span><span class="p">()</span></code>
+    </figure>
+    <p>
+      To install Docco, first make sure you have <a href="http://nodejs.org/">Node.js</a>,
+      <a href="http://pygments.org/">Pygments</a> (install the latest dev version of Pygments
+      from <a href="http://dev.pocoo.org/hg/pygments-main">its Mercurial repo</a>), and
+      <a href="http://coffeescript.org/">CoffeeScript</a>. Then, with NPM:
+    </p>
+    <figure>
+      <code><span class="nv">generate_documentation = </span><span class="p">(</span><span class="nx">source</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="o">-&gt;</span>
+      <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span> <span class="nx">source</span><span class="p">,</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">code</span><span class="p">)</span> <span class="o">-&gt;</span>
+      &nbsp;&nbsp;<span class="k">throw</span> <span class="nx">error</span> <span class="k">if</span> <span class="nx">error</span>
+      &nbsp;&nbsp;<span class="nv">sections = </span><span class="nx">parse</span> <span class="nx">source</span><span class="p">,</span> <span class="nx">code</span>
+      &nbsp;&nbsp;<span class="nx">highlight</span> <span class="nx">source</span><span class="p">,</span> <span class="nx">sections</span><span class="p">,</span> <span class="o">-&gt;</span>
+      &nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">generate_html</span> <span class="nx">source</span><span class="p">,</span> <span class="nx">sections</span>
+      &nbsp;<span class="nx">callback</span><span class="p">()</span></code>
+    </figure>
+    <p>
+      To install Docco, first make sure you have <a href="http://nodejs.org/">Node.js</a>,
+      <a href="http://pygments.org/">Pygments</a> (install the latest dev version of Pygments
+      from <a href="http://dev.pocoo.org/hg/pygments-main">its Mercurial repo</a>), and
+      <a href="http://coffeescript.org/">CoffeeScript</a>. Then, with NPM:
+    </p>
+  </body>
+</html>
