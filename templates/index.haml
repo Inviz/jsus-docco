@@ -42,29 +42,30 @@
         %dt Author: 
         %dd Yaroslaff Fedin
     
-    %p
-      %strong Docco
-      is a quick-and-dirty, hundred-line-long, literate-programming-style
-      documentation generator. It produces HTML that displays your comments
-      alongside your code. Comments are passed through
-      %a{:href => "http://daringfireball.net/projects/markdown/syntax"}<> Markdown
-      , and code is
-      This page is the result of running Docco against its own source file.
+    %section#1
+      %p
+        %strong Docco
+        is a quick-and-dirty, hundred-line-long, literate-programming-style
+        documentation generator. It produces HTML that displays your comments
+        alongside your code. Comments are passed through
+        %a{:href => "http://daringfireball.net/projects/markdown/syntax"}<> Markdown
+        , and code is
+        This page is the result of running Docco against its own source file.
 
-    %p If you install Docco, you can run it from the command-line:
+      %p If you install Docco, you can run it from the command-line:
 
-    %code
-      docco src/*.coffee
+      %code
+        docco src/*.coffee
     
-    %p 
-      will generate linked HTML documentation for the named source files, saving
-      it into a <code>docs</code> folder.
+      %p 
+        will generate linked HTML documentation for the named source files, saving
+        it into a <code>docs</code> folder.
 
-    %p 
-      The <a href="http://github.com/jashkenas/docco">source for Docco</a> is available on GitHub,
-      and released under the MIT license.
+      %p 
+        The <a href="http://github.com/jashkenas/docco">source for Docco</a> is available on GitHub,
+        and released under the MIT license.
 
-    %figure
+    %figure#loc1-555
       %ol
         %li 1
         %li 2
@@ -80,12 +81,12 @@
         &nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">generate_html</span> <span class="nx">source</span><span class="p">,</span> <span class="nx">sections</span>
         &nbsp;<span class="nx">callback</span><span class="p">()</span>
 
-
-    %p 
-      To install Docco, first make sure you have <a href="http://nodejs.org/">Node.js</a>,
-      <a href="http://pygments.org/">Pygments</a> (install the latest dev version of Pygments
-      from <a href="http://dev.pocoo.org/hg/pygments-main">its Mercurial repo</a>), and
-      <a href="http://coffeescript.org/">CoffeeScript</a>. Then, with NPM:
+    %section#2
+      %p 
+        To install Docco, first make sure you have <a href="http://nodejs.org/">Node.js</a>,
+        <a href="http://pygments.org/">Pygments</a> (install the latest dev version of Pygments
+        from <a href="http://dev.pocoo.org/hg/pygments-main">its Mercurial repo</a>), and
+        <a href="http://coffeescript.org/">CoffeeScript</a>. Then, with NPM:
       
     %figure
       %code 
@@ -97,11 +98,12 @@
         &nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">generate_html</span> <span class="nx">source</span><span class="p">,</span> <span class="nx">sections</span>
         &nbsp;<span class="nx">callback</span><span class="p">()</span>
     
-    %p 
-      To install Docco, first make sure you have <a href="http://nodejs.org/">Node.js</a>,
-      <a href="http://pygments.org/">Pygments</a> (install the latest dev version of Pygments
-      from <a href="http://dev.pocoo.org/hg/pygments-main">its Mercurial repo</a>), and
-      <a href="http://coffeescript.org/">CoffeeScript</a>. Then, with NPM:
+    %section#3
+      %p 
+        To install Docco, first make sure you have <a href="http://nodejs.org/">Node.js</a>,
+        <a href="http://pygments.org/">Pygments</a> (install the latest dev version of Pygments
+        from <a href="http://dev.pocoo.org/hg/pygments-main">its Mercurial repo</a>), and
+        <a href="http://coffeescript.org/">CoffeeScript</a>. Then, with NPM:
 
     %figure
       %ol
@@ -118,9 +120,10 @@
         &nbsp;&nbsp;<span class="nx">highlight</span> <span class="nx">source</span><span class="p">,</span> <span class="nx">sections</span><span class="p">,</span> <span class="o">-&gt;</span>
         &nbsp;&nbsp;&nbsp;&nbsp;<span class="nx">generate_html</span> <span class="nx">source</span><span class="p">,</span> <span class="nx">sections</span>
         &nbsp;<span class="nx">callback</span><span class="p">()</span>
-        
-    %p 
-      To install Docco, first make sure you have <a href="http://nodejs.org/">Node.js</a>,
-      <a href="http://pygments.org/">Pygments</a> (install the latest dev version of Pygments
-      from <a href="http://dev.pocoo.org/hg/pygments-main">its Mercurial repo</a>), and
-      <a href="http://coffeescript.org/">CoffeeScript</a>. Then, with NPM:
+    
+    %section#4
+      %p 
+        To install Docco, first make sure you have <a href="http://nodejs.org/">Node.js</a>,
+        <a href="http://pygments.org/">Pygments</a> (install the latest dev version of Pygments
+        from <a href="http://dev.pocoo.org/hg/pygments-main">its Mercurial repo</a>), and
+        <a href="http://coffeescript.org/">CoffeeScript</a>. Then, with NPM:

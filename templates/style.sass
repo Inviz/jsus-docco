@@ -6,10 +6,10 @@ p, h1, h2, h3, ol, li, ol, ul, dt, dd, dl, body, html
   :margin 0
   
 body
-  :width 45%
+  :width 40%
   :padding-left 2.5%
   :padding-right 2.5%
-  :background #7BA32D
+  :background #BFA730
   :font-family Helvetica
   &:after
     :content "."
@@ -22,8 +22,9 @@ body
 body > *
   :padding-left 6%
   :padding-right 6%
+  
 html
-  :background #094201
+  :background #FFD300
   
 header
   :background rgba(255, 255, 255, 0.1)
@@ -36,12 +37,24 @@ header
     dt
       :width 5em
       :font-weight bold
+      
+
+
+section, руфвук
+  :float left
+  :clear both
+  :width 88%
+  
 p, dl, li
-  :color #C4EEFF
+  :color #665504
   :font-weight normal
   
 a
-  :color #A41717
+  :color #BF7330
+  &:hover
+    :color #FF7800
+  &:visited
+    :color #A64E00
   
 p
   :margin-top 1.5em
@@ -77,23 +90,24 @@ dl
     
   dd
     :margin-left 1em
-
-
+  
 figure
   :display block
   :float right
-  :margin-right= - 100% / 4 * 4.5
-  :width 95%
+  :margin-right -139.75%
+  :width 120%
   :clear right
   :padding 2.5em 5% 3em
   > ol
+    :text-shadow 0 1px 0 #FFDE40
+    :-moz-text-shadow 0 1px 0 #FFDE40
+    :-webkit-text-shadow 0 1px 0 #FFDE40
     :width 7.5%
     :text-align right
     :float left
     :font-size 0.8em
-    :color #7BA32D
     :-webkit-border-radius 0.2em
-    :background rgba(255, 255, 255, 0.1)
+    :background rgba(166, 137, 0, 0.1)
     :border 1px solid rgba(0, 0, 0, 0.3)
     :list-style none
     :margin-left -11.25%
