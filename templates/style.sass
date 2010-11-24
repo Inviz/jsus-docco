@@ -1,7 +1,8 @@
 html, body
   :min-height 100%
+  :line-height 1.5
   
-p, h1, h2, h3, ol, li, ol, ul, dt, dd, dl, body, html
+p, h1, h2, h3, ol, li, ul, dt, dd, dl, body, html
   :padding 0
   :margin 0
   
@@ -18,6 +19,10 @@ body
     :display block
     :clear both
     
+figure#relations
+  h2 ~ h2
+    :margin-top 1.5em
+    
   
 body > *
   :padding-left 6%
@@ -28,12 +33,14 @@ html
   
 header
   :background rgba(255, 255, 255, 0.1)
-  :padding-top 1em
   :display block
+
   
   dl
-    :margin-top= 1.5em / 4 * 3
+    :margin-top= 1.5em / 3 * 4
     :font-size 0.75em
+    :line-height= 1.5em / 3 * 4
+    :overflow hidden
     dt
       :width 5em
       :font-weight bold
@@ -64,7 +71,6 @@ h1
   
 h2
   :font-size 1em
-  :line-height 2em
   
 h1, h2, h3
   :color #A41717
@@ -94,10 +100,10 @@ dl
 figure
   :display block
   :float right
-  :margin-right -139.75%
-  :width 120%
+  :margin-right -140%
+  :width 122.75%
   :clear right
-  :padding 2.5em 5% 3em
+  :padding 1.5em 5% 3em
   > ol
     :text-shadow 0 1px 0 #FFDE40
     :-moz-text-shadow 0 1px 0 #FFDE40
@@ -110,14 +116,15 @@ figure
     :background rgba(166, 137, 0, 0.1)
     :border 1px solid rgba(0, 0, 0, 0.3)
     :list-style none
-    :margin-left -11.25%
+    :margin-left -9.25%
     li
       :margin 0
   > code, > ol
     :font-size 1em
     :font-family monospace
-  ~ figure
-    :padding-top 1.5em
+    
+  > code
+    :white-space pre
 body
   .hll
     background-color: #ffffcc 
